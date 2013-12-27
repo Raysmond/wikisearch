@@ -1,5 +1,6 @@
 body {
-  padding-top: 70px;
+    padding-top: 70px;
+    line-height: 1.6;
 }
 
 /* Reset the container */
@@ -8,14 +9,19 @@ body {
     width: 970px;
 }
 
-
-#footer{
-    position: absolute;
-    bottom:0;
-    width: 100%;
+.main-content {
+    min-height: 450px;
 }
 
-#footer .container{
+#footer .container {
     padding-bottom: 20px;
     text-align: center;
+}
+
+ul.result-list {
+    margin-top: 10px;
+}
+
+ul.result-list li {
+
 }

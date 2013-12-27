@@ -18,9 +18,7 @@
     <!--<script src="../../assets/js/respond.min.js"></script>-->
     <![endif]-->
 </head>
-
-<body>
-
+<body class="<?=((Rays::uri()=="" || Rays::uri()=="search/index")?"front":"page-".Rays::router()->getControllerId()."-".Rays::router()->getActionId())?>">
 <!-- Fixed navbar -->
 <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -32,28 +30,19 @@
             </button>
             <a class="navbar-brand" href="#"><?=Rays::app()->getName()?></a>
         </div>
+        <?php
+        $curUrl = Rays::uri();
+        if(($pos = strpos($curUrl,"?"))!==false)
+            $curUrl = substr($curUrl,0,$pos);
+        ?>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="<?=Rays::baseUrl()?>">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li class="dropdown-header">Nav header</li>
-                        <li><a href="#">Separated link</a></li>
-                        <li><a href="#">One more separated link</a></li>
-                    </ul>
-                </li>
+                <li class="<?=($curUrl=='site/index'||$curUrl=='')?'active':''?>"><a href="<?=Rays::baseUrl()?>">Home</a></li>
+                <li class="<?=($curUrl=='site/about')?'active':''?>"><?=RHtml::linkAction("site","About","about")?></li>
+                <li class="<?=($curUrl=='site/contact')?'active':''?>"><?=RHtml::linkAction("site","Contact","contact")?></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="../navbar/">Default</a></li>
-                <li><a href="../navbar-static-top/">Static top</a></li>
-                <li class="active"><a href="./">Fixed top</a></li>
+                <li><a href="https://github.com/Raysmond/EnWikiIndexing" target="_blank">Github</a></li>
             </ul>
         </div>
         <!--/.nav-collapse -->
