@@ -10,7 +10,9 @@ return array(
     'name' => 'WikiSearch',
     'baseDir' => dirname(__FILE__),
     'basePath' => '/wikisearch',
-    'isCleanUrl'=>false,
-    'defaultController'=>'search',
-    'layout'=>'index'
+    'isCleanUrl' => false,
+    'defaultController' => 'search',
+    'layout' => 'index',
+    'exceptionAction' => 'site/exception',
+    'isDebug' => true
 );
