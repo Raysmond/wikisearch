@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
 
     <title><?= Rays::app()->getName() ?></title>
     <?php $baseUrl = Rays::baseUrl(); ?>
     <!-- Bootstrap core CSS -->
-    <link href="<?= $baseUrl ?>/app/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?= $baseUrl ?>/app/assets/css/navbar-fixed-top.css" rel="stylesheet">
+    <link href="<?= $baseUrl ?>/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?= $baseUrl ?>/assets/css/navbar-fixed-top.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <!--<script src="../../assets/js/html5shiv.js"></script>-->
@@ -70,8 +69,8 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="<?= $baseUrl ?>/app/assets/js/jquery.min.js"></script>
-<script src="<?= $baseUrl ?>/app/assets/js/bootstrap.min.js"></script>
-<script src="<?= $baseUrl ?>/app/assets/js/main.js"></script>
+<script src="<?= $baseUrl ?>/assets/js/jquery.min.js"></script>
+<script src="<?= $baseUrl ?>/assets/js/bootstrap.min.js"></script>
+<script src="<?= $baseUrl ?>/assets/js/main.js"></script>
 </body>
 </html>

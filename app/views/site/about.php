@@ -7,4 +7,9 @@
 </p>
 <p>This is the demo web page for searching articles through inverted indexes built by EnWikiIndexing.</p>
 
-<p>Github link: <a href="https://github.com/Raysmond/EnWikiIndexing">https://github.com/Raysmond/EnWikiIndexing</a></p>
+<p>
+    <h3>Github link: </h3>
+    EnWikiIndexing: <a href="https://github.com/Raysmond/EnWikiIndexing">https://github.com/Raysmond/EnWikiIndexing</a>
+    <br/>
+    WikiSearch: <a href="https://github.com/Raysmond/wikisearch">https://github.com/Raysmond/wikisearch</a>
+</p>
