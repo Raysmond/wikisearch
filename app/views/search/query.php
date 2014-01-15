@@ -14,13 +14,11 @@
     if (!isset($result->error)) {
         if (!empty($result)) {
             echo '<ul class="result-list">';
-            foreach ($result->result as $keyword) {
-                foreach ($keyword->pages as $page) {
-                    echo '<li>';
-                    $link = "http://en.wikipedia.org/wiki/" . str_replace(" ", "_", $page->title);
-                    echo RHtml::link($page->title, $page->title, $link, array('class' => 'result-item',"target"=>"_blank"));
-                    echo '</li>';
-                }
+            foreach ($result->pages as $page) {
+                echo '<li>';
+                $link = "http://en.wikipedia.org/wiki/" . str_replace(" ", "_", $page->title);
+                echo RHtml::link($page->title, $page->title, $link, array('class' => 'result-item', "target" => "_blank"));
+                echo '</li>';
             }
             echo '</li>';
         }
